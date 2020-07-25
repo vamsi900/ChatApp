@@ -1,0 +1,52 @@
+<div class="container d-flex align-items-center justify-content-around">
+  <div class="card">
+    <div class="container">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          [(ngModel)]="user"
+          class="form-control"
+          id="username"
+          placeholder="Enter username"
+          autocomplete="off"
+        />
+      </div>
+      <label>Select Room</label>
+      <select class="form-control" [(ngModel)]="selectedRoom">
+        <option *ngFor="let room of chooseRoom" [value]="room">{{
+          room
+        }}</option>
+      </select>
+      <div
+        class="d-flex align-items-center justify-content-center"
+        *ngIf="createNewRoom"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            [(ngModel)]="newRoom"
+            class="form-control"
+            id="newrrom"
+            placeholder="Enter New Room Name"
+          />
+        </div>
+        <button
+          type="button"
+          class="btn btn-sm btn-primary"
+          (click)="addRoom()"
+        >
+          ADD
+        </button>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-lg btn-primary" (click)="create()">
+          Create Room
+        </button>
+        <button type="button" class="btn btn-lg btn-primary" (click)="join()">
+          Join Room
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

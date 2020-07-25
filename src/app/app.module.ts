@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { NgxCalendarModule } from 'ss-ngx-calendar';
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChatComponent } from './chat/chat.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ChatComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
